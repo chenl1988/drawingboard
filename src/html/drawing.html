@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+    <script src="../lib/flexible.min.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="../css/style.css" />
+    <title>画板</title>
+</head>
+
+<body>
+    <div class="drawing-wrapper">
+        <div class="upload-loading-wrapper">
+            <img src="../images/upload-loading.gif" alt="" class="loading-img">
+        </div>
+
+
+        <div class="modal-wrapper ">
+            <div class="modal-content ">
+                <p class="modal-title">恭喜你，提交成功！</p>
+                <p class="modal-info ">20个工作日里经后台审核后，符合基本要求的优秀创意将会收到意外奖励哦！</p>
+                <a href="javascript:;" class="modal-btn">确定</a>
+            </div>
+        </div>
+
+        <div class="canvasDiv">
+            <canvas id="canvas">请使用支持HTML5的浏览器</canvas>
+            <input type="text" class="drawing-title" placeholder="请输入您的标题">
+        </div>
+        <div>
+            <ul id="toolsul" class="tools">
+                <li data-type="back">
+                    <i class="icon-tools icon-back-black" data-default='icon-tools icon-back-black'></i>
+                </li>
+                <li id="toolsPencil" data-type="pen" class="active">
+                    <i class="icon-tools icon-pen-black" data-default='icon-tools icon-pen-black'></i>
+                </li>
+                <li data-type="text">
+                    <i class="icon-tools icon-text-black" data-default='icon-tools icon-text-black'></i>
+                </li>
+                <li data-type="rectangle">
+                    <i class="icon-tools icon-rectangle-black" data-default='icon-tools icon-rectangle-black'></i>
+                </li>
+                <li data-type="circle">
+                    <i class="icon-tools icon-circle-black" data-default='icon-tools icon-circle-black'></i>
+                </li>
+                <li data-type="remove">
+                    <i class="icon-tools icon-remove-black" data-default='icon-tools icon-remove-black'></i>
+                </li>
+                <li data-type="color">
+                    <i class="icon-tools icon-color-black" data-default='icon-color icon-color-black'><em></em></i>
+                    <div class="color-list">
+                        <div class="triangle-down"></div>
+                        <div class="color-item c-fff" data-color="#fff">
+                        </div>
+                        <div class="color-item c-ffc000" data-color="#ffc000">
+                        </div>
+                        <div class="color-item c-78f209 " data-color="#78f209">
+                        </div>
+                        <div class="color-item c-099d3d " data-color="#099d3d">
+                        </div>
+                        <div class="color-item c-05c4ee " data-color="#05c4ee">
+                        </div>
+                        <div class="color-item c-fe907f " data-color="#fe907f">
+                        </div>
+                        <div class="color-item c-bb4ffa " data-color="#bb4ffa">
+                        </div>
+                        <div class="color-item c-b40607 " data-color="#b40607">
+                        </div>
+
+                    </div>
+                </li>
+                <li data-type="base64">
+                    <i class="icon-tools icon-base64-black " data-default='icon-tools icon-base64-black'><img src="../images/upload-btn.png " alt=" "></i>
+                </li>
+            </ul>
+
+        </div>
+        <img src="../images/bg-img.jpg " id="my-image " class="imgBg ">
+
+    </div>
+
+
+
+    <div class="tip-wrapper">
+        <div class="tip-item tip-pen active">
+            <div class="triangle-down"></div>
+            <p class="tip-info">点击可以随意涂鸦或标示区</p>
+        </div>
+        <div class="tip-item tip-text">
+            <div class="triangle-down"></div>
+            <p class="tip-info">点击可以输入文字描述</p>
+        </div>
+        <div class="tip-item tip-rect-arc">
+            <div class="triangle-down"></div>
+            <p class="tip-info">点击可以使用矩形&nbsp;/&nbsp;圆形工具</p>
+        </div>
+
+        <div class="tip-item tip-remove">
+            <div class="triangle-down"></div>
+            <p class="tip-info">点击可以擦除图案</p>
+        </div>
+    </div>
+
+
+
+
+    <script src="../lib/jquery-3.1.0.min.js "></script>
+    <script src="../lib/fabric.min.js "></script>
+    <script src="../js/drawing.js "></script>
+</body>
+
+</html>
